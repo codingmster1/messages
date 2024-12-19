@@ -5,19 +5,22 @@
     <title>Message Board</title>
 </head>
 <body>
-    
     <div class="container">
         <canvas id="matrix"></canvas>
         <div class="content">
-    <h1>Message Board</h1>
-    <ul>
-        <% messages.forEach(message => { %>
-            <li><strong><%= message.user %></strong>: <%= message.text %> <em>(<%= message.added.toLocaleString() %>)</em></li>
-        <% }) %>
-    </ul>
-    <a href="/new">Add a new message</a>
+            <h1>Message Board</h1>
+            <ul>
+                <% messages.forEach(message => { %>
+                    <li>
+                        <strong><%= message.user %></strong>: <%= message.text %> <em>(<%= message.added %>)</em>
+
+                        </form>
+                    </li>
+                <% }) %>
+            </ul>
+            <a href="/new">Add a new message</a>
+        </div>
     </div>
-</div>
     <script src="matrix.js"></script>
 </body>
 </html>

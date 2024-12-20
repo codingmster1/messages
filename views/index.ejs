@@ -12,8 +12,9 @@
             <ul>
                 <% messages.forEach(message => { %>
                     <li>
-                        <strong><%= message.user %></strong>: <%= message.text %> <em>(<%= message.added %>)</em>
-
+                        <strong><%= message.user %></strong>: <%= message.text %> <em>(<%= message.added.toLocaleString() %>)</em>
+                        <form action="/delete/<%= message.id %>" method="post" style="display:inline;">
+                            <button type="submit">Delete</button>
                         </form>
                     </li>
                 <% }) %>
